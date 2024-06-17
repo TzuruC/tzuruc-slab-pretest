@@ -19,6 +19,10 @@ axios.get('./json/ShipManagement.json')
 function renderSplineChart(chartId, chartData, yMax, yMin) {
     let chart = c3.generate({
         bindto: chartId, // HTML 元素綁定
+        size: {
+            height: 300,
+            width: 800
+        },
         data: {
             x: 'x',
             columns: chartData,
@@ -47,6 +51,10 @@ function renderSplineChart(chartId, chartData, yMax, yMin) {
 function renderBarChart(chartId, chartData, yName) {
     let chart = c3.generate({
         bindto: chartId, // HTML 元素綁定
+        size: {
+            height: 300,
+            width: 800
+        },
         data: {
             x: 'x',
             columns: chartData,

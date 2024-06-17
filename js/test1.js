@@ -17,6 +17,10 @@ axios.get('./json/sales_data.json')
 function renderSplineChart(chartId, chartData, yName) {
     let chart = c3.generate({
         bindto: chartId, // HTML 元素綁定
+        size: {
+            height: 300,
+            width: 800
+        },
         data: {
             x: 'x',
             columns: chartData,
@@ -42,6 +46,10 @@ function renderSplineChart(chartId, chartData, yName) {
 function renderBarChart(chartId, chartData) {
     let chart = c3.generate({
         bindto: chartId, // HTML 元素綁定
+        size: {
+            height: 300,
+            width: 800
+        },
         data: {
             x: 'x',
             columns: chartData,
