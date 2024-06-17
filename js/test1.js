@@ -171,7 +171,7 @@ function showCahr31Data(data) {
     });
     // 轉為 chart 格式
     const formattedData = Object.entries(result).map(([key, values]) => [key, ...values]);
-    formattedData.unshift(["x", ...category]) // 加上x軸格式
+    formattedData.unshift(['x', ...category]) // 加上x軸格式
     renderBarChart(
         '#test1chart3',
         formattedData

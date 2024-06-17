@@ -7,7 +7,8 @@ axios.get('./json/ShipManagement.json')
         showChartBoatFuelEff(data);
         chartCargoTsportEff(data);
         chartCompAnalys(data);
-        d3.selectAll(".c3-axis-y-label").attr("transform", "translate(20,100)")
+        chartCompAnalys2(data);
+        d3.selectAll(".c3-axis-y-label").attr("transform", "translate(20,100)");
     })
     .catch(function (error) {
         console.log(error);
@@ -48,7 +49,7 @@ function renderSplineChart(chartId, chartData, yMax, yMin) {
 }
 
 // 印出圖表 - 長條圖
-function renderBarChart(chartId, chartData, yName) {
+function renderBarChart(chartId, chartData, xName, yName) {
     let chart = c3.generate({
         bindto: chartId, // HTML 元素綁定
         size: {
@@ -70,7 +71,7 @@ function renderBarChart(chartId, chartData, yName) {
             x: {
                 type: 'category',
                 label: {
-                    text: '日期(月)',
+                    text: xName,
                     position: 'outer-right'
                 }
             }, y: {
@@ -116,6 +117,7 @@ function chartCargoTsportEff(data) {
         '#chartCargoTsportEff',
         [["x", ...month],
         ['單位重量貨物的航程距離', ...ratio]],
+        '日期(月)',
         '貨物運輸效率'
     )
 }
@@ -147,7 +149,6 @@ function chartCompAnalys(data) {
         // 返回 sum 除以數組長度得到的平均值
         return sum / data.length;
     }
-
     const standardValues = {
         averageFuelConsumption: calcAverage(data, 'fuelConsumption'),
         averagedistanceTravelled: calcAverage(data, 'distanceTravelled'),
@@ -191,7 +192,58 @@ function chartCompAnalys(data) {
         ['燃油消耗', ...analysFuelConsumption],
         ['航行英里數', ...analysDistanceTravelledn],
         ['貨物噸位', ...analysCargoWeight]],
+        '日期(月)',
         '判定指標'
     )
 }
 
+// 取得第四張表的資料
+function chartCompAnalys2(data) {
+    // 取得日期
+    const dateObj = {};
+    let month = [];
+    data.forEach(e => {
+        month.push(e.month);
+    });
+    // 取得標準值 (當前值-最小值)/(最大值-最小值) = 該值的標準值
+    // 1.求最大值和最小值（用於標準化）
+    function calcMaxMin(data, key) {
+        const values = data.map(item => item[key]);
+        return {
+            max: Math.max(...values),
+            min: Math.min(...values)
+        };
+    }
+    const fuelConsumptionMaxMin = calcMaxMin(data, 'fuelConsumption');
+    const distanceTravelledMaxMin = calcMaxMin(data, 'distanceTravelled');
+    const cargoWeightMaxMin = calcMaxMin(data, 'cargoWeight');
+    // 2.取得標準化數據
+    function normalize(value, min, max) {
+        return (value - min) / (max - min);
+    }
+    const normalizeFC = data.map(e => ([
+        normalize(e.fuelConsumption, fuelConsumptionMaxMin.min, fuelConsumptionMaxMin.max)
+    ]));
+    const normalizeDT = data.map(e => ([
+        normalize(e.distanceTravelled, distanceTravelledMaxMin.min, distanceTravelledMaxMin.max)
+    ]));
+    const normalizeCW = data.map(e => ([
+        normalize(e.cargoWeight, cargoWeightMaxMin.min, cargoWeightMaxMin.max)
+    ]));
+
+    const formattedData = month.map((m, index) => [
+        m,
+        normalizeFC[index][0],
+        normalizeDT[index][0],
+        normalizeCW[index][0]
+    ]);
+    formattedData.unshift(['x', '燃油消耗', '航行英里數', '貨物噸位']) // 加上x軸格式
+
+    // 比較燃油消耗、航行英里數和貨物噸位
+    renderBarChart(
+        '#chartCompAnalys2',
+        formattedData,
+        ' ',
+        '判定指標'
+    )
+}
