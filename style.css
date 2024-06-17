@@ -20,7 +20,7 @@ li {
 .container {
   max-width: 1080px;
   margin: 0 auto;
-  padding: 80px 40px;
+  padding: 40px 0;
 }
 .test1-answer,
 .test2-answer {
@@ -35,6 +35,7 @@ li {
 }
 .chart-box {
   width: 100%;
+  margin-top: 24px;
 }
 /* C3 樣式 */
 .c3 text {
