@@ -1,0 +1,20 @@
+{
+  "name": "pre-emp-test",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^5.2.0"
+  },
+  "dependencies": {
+    "axios": "^1.7.2",
+    "c3": "^0.7.20",
+    "d3": "^7.9.0",
+    "normalize.css": "^8.0.1"
+  }
+}
