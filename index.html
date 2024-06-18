@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>陳姿如-前端工程師-答題</title>
+    <link rel="icon" href="#" />
+    <!-- normalize css -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    />
+    <!-- c3.css -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/c3/0.7.20/c3.min.css"
+    />
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <script type="module" crossorigin src="/assets/index-B475niKS.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-uvOileBm.css">
+  </head>
+  <body>
+      <h1>摯陞數位科技面試考題 - 前端工程師 - 陳姿如</h1>
+
+    <div class="container">
+      <div class="test1">
+        <h2>答題一</h2>
+        <div class="bg-even">
+          <h3>1. 銷貨數量-時間關係圖：</h3>
+         <div class="test1-answer">
+          <div class="discribe">
+            <p>
+              <strong>圖表說明︰</strong><br />
+              折線圖 - 利於觀察資料隨時間改變的狀況。
+            </p>
+            <p>
+              <strong>能展示的風險：</strong><br />
+              藉由觀察圖表，容易看出極端值的發生時間，以評估是否會累積成為風險發生的原因。<br />
+              藉由觀察銷貨數量，可以得知產品供應的狀況，判斷供貨是否穩定或有異常的趨勢。
+            </p>
+          </div>
+          <div class="chart-box"><div id="test1chart1"></div></div>
+        </div>
+        </div>
+        <div class="bg-odd">
+        <h3>2. 銷售-時間關係圖：</h3>
+        <div class="test1-answer">
+          <div class="discribe">
+            <p>
+              <strong>圖表說明︰</strong><br />
+              折線圖 - 利於觀察資料隨時間改變的狀況。
+            </p>
+            <p>
+              <strong>能展示的風險：</strong><br />
+              藉由觀察單價×銷售量的變化，幫助了解金流變化，評估成本控制或價格策略風險。
+            </p>
+          </div>
+          <div class="chart-box"><div id="test1chart2"></div></div>
+        </div>
+        </div>
+        <div class="bg-even">
+        <h3>3. 類別-銷量關係圖 ：</h3>
+        <div class="test1-answer">
+          <div class="discribe">
+            <p>
+              <strong>圖表說明︰</strong><br />
+              直方圖 -
+              具直觀呈現資料數量和可分組的特性，利於將相關聯的資料放在一起比對。
+            </p>
+            <p>
+              <strong>能展示的風險：</strong><br />
+              藉由圖表可以觀察銷貨數量之間的相對關係與趨勢，判斷商品的銷售狀況，評估特定類別商品的投資風險。
+            </p>
+          </div>
+          <div class="chart-box"><div id="test1chart3"></div></div>
+        </div>
+        </div>
+      </div>
+      <div class="test2">
+        <h2>答題二</h2>
+
+        <div class="test2chart1 bg-even">
+          <h3>1. 船隻燃油效率圖表：</h3>
+          <p>
+            <strong>圖表說明︰</strong><br />
+            以折線圖方式來呈現，又因燃油消耗率應為連續和緩的變化，改由曲線圖方式呈現。<br />
+            圖表 x 軸為時間日期(月)，y 軸為燃油消耗率(航行英里數/燃油消耗)。<br />
+            選擇曲線圖的方式，因其較容易觀察數據隨時間變化情形。
+          </p>
+          <div class="test2-answer">
+            <div class="discribe">
+              <p>
+                <strong>船隊運營效率分析︰</strong><br />
+                圖表顯示的是每個月燃油消耗率(單位燃油可航行英哩數)的變化。<br />
+                自一月到二月消耗率有明顯提昇，到三月時下降，四月時才漸漸回到平穩值。
+              </p>
+              <p>
+                <strong>潛在改進領域：</strong><br />
+                觀察圖表二月是相對極端值出現處，作為檢查船體可負載貨量的調整依據，調整進貨、出貨的時機。
+              </p>
+            </div>
+            <div class="chart-box"><div id="chartBoatFuelEff"></div></div>
+          </div>
+        </div>
+        <div class="test2chart2 bg-odd">
+          <h3>2. 貨物運輸效率圖表：</h3>
+          <p>
+            <strong>圖表說明︰</strong><br />
+            以直方圖方式來呈現，因其矩形面積的特性，更容易觀察數據彼此之間差異。<br />
+            圖表 x 軸為時間日期(月)，y
+            軸為每單位貨物噸位的航程距離(航行英里數/貨物噸位)。
+          </p>
+          <div class="test2-answer">
+            <div class="discribe">
+              <p>
+                <strong>船隊運營效率分析︰</strong><br />
+                圖表顯示的是每個月貨物運輸效率(航行英里數/貨物噸位)的變化。
+              </p>
+              <p>
+                圖表顯示二月份的貨物運輸效率較高，單位重量貨物的航程距離最遠。
+              </p>
+              <p>
+                <strong>潛在改進領域：</strong><br />
+                藉由圖表可以協助判定二月份的燃油消耗應會合理偏高，若燃油記錄在二月份出現峰值可考慮排除是異常狀況。
+              </p>
+            </div>
+            <div class="chart-box"><div id="chartCargoTsportEff"></div></div>
+          </div>
+        </div>
+        <div class="test2chart3 bg-even">
+          <h3>3. 綜合性能分析圖：</h3>
+          <p>
+            <strong>圖表說明︰</strong><br />
+            在本題遇到較多困難︰
+            <ol>
+              <li>首先需求為「旨在揭示船隻之間的綜合性能差異」，但從資料中的格式無法判別是否數據來自同一船隻。<br />
+              為解題方便，暫時先假設皆為同一船隻數值</li>
+              <li>其次在查詢適合呈現綜合性能的圖表中，有考慮到以平行坐標圖(Parallel
+            Coordinates Plot)來展示每組數據的變量。<br />但繼前因，平行坐標圖在數據量少時呈現結果能展示的資訊有限。<br />
+          最後採條形圖(Bar
+            Chart)方式呈現，因其簡單直觀、適合展示比較數據。<br />
+            第一次嘗試中的圖表 x 軸為日期(月)，y 軸為判定指標。<br /></li>
+              <li>三種綜合項目的比較，需要找相同的單位來達成在圖表上呈現，因此需要將數值標準化。<br />
+                在此採用 Min-Max 標準化，將燃油消耗、航行英里數和貨物噸位統整到 0~1 範圍內。<br />
+            使更容易看出極端值，以助於風險評估判斷。
+              </li>
+            </ol>
+            </p>
+            <p>
+            
+            </p>
+            
+          <div class="test2-answer">
+            
+            <div class="discribe">
+              <p>
+                <strong>船隊運營效率分析(1)︰</strong><br />
+                從圖表顯示可看出各指標在同一月份的表現狀況。<br />
+                圖表顯示隨月份推進，船隻綜合性能的變化。
+              </p>
+              <p>
+                <strong>潛在改進領域(1)：</strong><br />
+                一月和二月份的數值呈現較為極端，可以進一步探討造成的原因。
+              </p>
+            </div>
+            <div class="chart-box"><div id="chartCompAnalys"></div></div>
+          </div>
+          <p>
+              因考量到任務需求是圖表要能幫助作多船隻的比較，所以有了第二次的嘗試，<br />
+            第二次改將以圖表假設為一獨立船隻，x 軸為 3 種欲比較的類別，y 軸為判定指標。<br />
+            如後續有需要一次比較多艘船隻，需再帶入其他船隻資料製成新的圖表，再與此圖表比較。
+          </p>
+          <div class="test2-answer">
+            
+            <div class="chart-box"><div id="chartCompAnalys2"></div></div>
+            
+            <div class="discribe">
+              <p>
+                <strong>船隊運營效率分析(2)︰</strong><br />
+                將圖標依照觀測類別分組後，可以更容易觀察相同類型的數據隨時間的變化。
+              </p>
+              <p>
+                <strong>潛在改進領域(2)：</strong><br />
+                一月份的航行英哩數、二月份燃油消耗、二月份的貨物噸位都有極端值出現，可以進一步探討造成的原因。
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- C3 D3 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.16.0/d3.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/c3/0.7.20/c3.js"></script>
+  </body>
+</html>
