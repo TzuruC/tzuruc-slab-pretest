@@ -9,6 +9,12 @@ h1 {
   font-size: 20px;
   text-align: center;
 }
+h2 {
+  padding-top: 32px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  border-bottom: 1px solid #a9a9a9;
+}
 p {
   margin-top: 0;
   line-height: 1.5;
@@ -20,7 +26,7 @@ li {
 .container {
   max-width: 1080px;
   margin: 0 auto;
-  padding: 40px 0;
+  padding: 0;
 }
 .test1-answer,
 .test2-answer {
@@ -36,6 +42,14 @@ li {
 .chart-box {
   width: 100%;
   margin-top: 24px;
+}
+.bg-odd {
+  padding: 40px;
+  background-color: #f4f4f4;
+}
+.bg-even {
+  padding: 40px;
+  background-color: #fafafa;
 }
 /* C3 樣式 */
 .c3 text {
