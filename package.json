@@ -1,5 +1,5 @@
 {
-  "name": "pre-emp-test",
+  "name": "tzuruc-slab-pretest",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -23,8 +23,5 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "homepage": "https://github.com/TzuruC/tzuruc-slab-pretest",
-  "dependencies": {
-    "gh-pages": "^5.0.0"
-  }
+  "homepage": "https://github.com/TzuruC/tzuruc-slab-pretest"
 }
