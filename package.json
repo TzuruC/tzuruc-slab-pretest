@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "deploy": "vite build && gh-pages -d dist"
   },
   "devDependencies": {
     "vite": "^5.2.0"
@@ -16,5 +17,14 @@
     "c3": "^0.7.20",
     "d3": "^7.9.0",
     "normalize.css": "^8.0.1"
+  },
+  "description": "本專案為摯陞數位科技有限公司面試測驗考題，個人答題結果。",
+  "main": "main.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "homepage": "https://github.com/TzuruC/tzuruc-slab-pretest",
+  "dependencies": {
+    "gh-pages": "^5.0.0"
   }
 }
